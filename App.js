@@ -8,7 +8,7 @@ import {
   createReducer,
   combineReducers
 } from "@reduxjs/toolkit"
-
+import ecommerceReducer from "./store"
 import { screens } from "@screens"
 import { modules, reducers, hooks, initialRoute } from "@modules"
 import { connectors } from "@store"
@@ -33,7 +33,7 @@ const getNavigation = (modules, screens, initialRoute) => {
       return <Stack.Screen key={name} name={name} component={Component} />
     })
 
-    const screenOptions = { headerShown: true };
+    const screenOptions = { headerShown: false };
 
     return (
       <NavigationContainer>
@@ -55,6 +55,7 @@ const getStore = (globalState) => {
   })
 
   const reducer = combineReducers({
+    ecommerce: ecommerceReducer,
     app: appReducer,
     ...reducers,
     ...connectors

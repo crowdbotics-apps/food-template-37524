@@ -1,4 +1,4 @@
-app_identifier("com.crowdbotics.food-template-37524-id") # The bundle identifier of your app
+app_identifier("com.crowdbotics.food-template-375243-id") # The bundle identifier of your app
 apple_id("") # Your Apple email address
 
 itc_team_id("") # App Store Connect Team ID
